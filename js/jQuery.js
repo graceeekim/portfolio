@@ -1,6 +1,3 @@
-// issues I need to fix:
-
-// next step: make div for about blurbs, create grid for that, find way to align to bottom of photo;
 $(window).on("load", function() {
 
 //  VARIABLES
@@ -72,10 +69,7 @@ $(window).on("load", function() {
         }              
     }
 
-// CODE TO RUN WHEN EVERYTHING IS LOADED
-   if (window.location.href.indexOf('index') > -1 ) {
-        $("#menu-about").css("color", "#f37053");
-   }  
+// CODE TO RUN WHEN EVERYTHING IS LOADED 
     $(window).scroll(function() {
         scrollTop = window.scrollY;
     })
