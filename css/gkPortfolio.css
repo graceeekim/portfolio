@@ -161,9 +161,9 @@ p {
   font-size: 1.25em;
   padding: 0px 0px 0px 20px;
 }
-.menu-link a {
+/* .menu-link a {
   color: grey;
-}
+} */
 @media screen and (min-width: 767px), (min-width: 481px) {
   .menu-link {
     font-size: 1em;
