@@ -1,0 +1,372 @@
+/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
+/* edit about me blurb to have 1 column 3 row text for tablet view */
+* {
+  text-decoration: none;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+::selection {
+  background-color: rgba(243, 112, 83, 0.5);
+}
+
+body {
+  height: 100%;
+  background-color: #fee6d3;
+  margin: 0 20px 0px 20px;
+  font-size: 100%;
+  scroll-behaviour: smooth;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  body {
+    margin: 0 0 0 20px;
+  }
+}
+
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #about {
+    margin: 0 20px 0 20px;
+  }
+}
+
+p {
+  font-family: degular, sans-serif;
+  font-size: 90%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid: [row1-start] "header" auto [row1-end] [row2-start] "sidebar" auto [row2-end] [row3-start] "main" auto [row2-end] [row4-start] "footer" auto [row3-end]/100%;
+  gap: 20px;
+  align-items: start;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  .container {
+    grid: [row1-start] "header main" auto [row1-end] [row2-start] "sidebar main" 1fr [row2-end] [row3-start] "footer main" auto [row3-end]/1fr 3fr;
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+}
+
+#header, #sidebar, #main-content, #footer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#header {
+  width: calc(100vw - 40px);
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  background-color: #fee6d3;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #header {
+    width: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}
+
+#sidebar {
+  grid-area: sidebar;
+  justify-content: center;
+}
+
+#main-content {
+  grid-area: main;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #main-content {
+    max-height: 100%;
+    min-height: 100%;
+    overflow: scroll;
+  }
+}
+
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #about #main-content {
+    padding-bottom: 20px;
+  }
+}
+
+#about-me {
+  display: grid;
+  grid: [row1-start] "intro" auto [row1-end] [row2-start] "bio" auto [row2-end] [row3-start] "experience" auto [row3-end] [row4-start] "skills" auto [row4-end] [row5-start] "contact" auto [row5-end]/100%;
+  gap: 20px;
+  align-content: start;
+}
+@media screen and (min-width: 481px) {
+  #about-me {
+    grid: [row1-start] "intro" auto [row1-end] [row2-start] "bio" auto [row2-end] [row3-start] "experience" auto [row3-end] [row4-start] "skills" auto [row4-end] [row5-start] "contact" 1fr [row5-end]/auto;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+  }
+}
+@media screen and (min-width: 767px) {
+  #about-me {
+    grid: [row1-start] "intro intro intro" auto [row1-end] [row2-start] "bio experience skills" 1fr [row2-end] [row3-start] "contact contact contact" auto [row3-end]/auto;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+  }
+}
+
+#footer {
+  grid-area: footer;
+  align-items: end;
+  padding-bottom: 20px;
+  align-self: end;
+}
+
+.site-logo {
+  width: 100%;
+  justify-content: flex-start;
+  font-family: playfair-display, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24pt;
+}
+.site-logo a {
+  text-decoration: none;
+}
+
+#gk {
+  font-size: 36pt;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #gk {
+    font-size: 40pt;
+  }
+}
+
+.menu-link {
+  font-family: degular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25em;
+  padding: 0px 0px 0px 20px;
+}
+.menu-link a {
+  color: grey;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  .menu-link {
+    font-size: 1em;
+    padding: 20px 20px 0px 0px;
+  }
+}
+
+.icon {
+  height: 20px;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  .icon {
+    height: 20px;
+  }
+}
+
+#header-nav {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #header-nav {
+    flex-flow: row wrap;
+    box-sizing: border-box;
+  }
+}
+
+#site-pages {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #site-pages {
+    justify-content: flex-start;
+  }
+}
+
+#header-blurb {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  border: #f37053 2px;
+  border-style: none none solid none;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #header-blurb {
+    border-style: solid none none none;
+    grid-area: intro;
+  }
+}
+
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #about #header-blurb {
+    border-style: solid none none none;
+  }
+}
+
+#header-blurb > p {
+  font-size: 2rem;
+  font-family: freight-display-pro, serif;
+  font-weight: 600;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #header-blurb > p {
+    font-size: 2.5vw;
+    font-family: freight-display-pro, serif;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+}
+
+#footer {
+  font-size: 0.75rem;
+  color: grey;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #f37053;
+}
+a:hover {
+  color: #522e91;
+}
+
+a.active-page {
+  color: red;
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  max-height: 600px;
+  max-width: 1300px;
+}
+
+.image-container--circular {
+  border-radius: 50%;
+  text-align: center;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-container {
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  .project-container {
+    margin: 0 0 0 0;
+  }
+}
+
+.project-container.last {
+  padding: 0;
+}
+
+.project-description {
+  background-color: white;
+  margin: 0px;
+  padding: 20px 40px 20px 20px;
+}
+@media screen and (min-width: 481px) {
+  .project-description {
+    padding: 20px 20px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .project-description {
+    padding: 20px 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    align-self: flex-start;
+  }
+}
+
+.empty {
+  width: 100%;
+  background-color: white;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-family: freight-display-pro;
+  font-size: 175%;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: freight-display-pro, serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+#portrait {
+  width: 75%;
+  padding: 20px 0px 20px 0px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 767px), (min-width: 481px) {
+  #portrait {
+    width: 100%;
+    border: #f37053 2px;
+    border-style: solid none none none;
+    border-radius: 0%;
+  }
+}
+
+#bio {
+  grid-area: bio;
+}
+
+#experience {
+  grid-area: experience;
+}
+
+#skills {
+  grid-area: skills;
+}
+
+#bio, #experience, #skills {
+  align-self: start;
+}
+
+#contact {
+  grid-area: contact;
+  font-size: 100%;
+  align-self: end;
+}
+
+/*# sourceMappingURL=gkPortfolio.css.map */
