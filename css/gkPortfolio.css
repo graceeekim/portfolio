@@ -151,7 +151,9 @@ p {
     font-size: 40pt;
   }
 }
-
+#menu-about {
+  color: #f37053;
+}
 .menu-link {
   font-family: degular, sans-serif;
   font-weight: 400;
