@@ -39,8 +39,7 @@ $(window).on("load", function() {
         hidingMenu = setInterval(hideShowMenuScroll, 100);
     }
     function desktopMenuUX() {   
-        clearInterval(hidingMenu);
-        clearInterval(hidingBlurb);         
+        clearInterval(hidingMenu);      
         var contentPlacement = $('#header-nav').outerHeight(true) + 20;
          if (window.location.href.indexOf('about')) {
             $('#sidebar').css('padding-top', 0); 
