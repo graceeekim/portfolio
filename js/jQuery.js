@@ -12,14 +12,6 @@ $(window).on("load", function() {
     var hidingBlurb;
 
 //  FUNCTIONS
-    function hideBlurbOnScroll() {
-        var scrollPosition = scrollTop;            
-        if (window.location.href.indexOf('index') > -1 && scrollPosition >= 2) {
-            $('#header-blurb').hide("fade", { direction: "down"}, 100);      
-        } else {
-            $('#header-blurb').show("fade", { direction: "down"}, 100); 
-        }
-    }
     function hideShowMenuScroll() {
         var currentScrollPos = scrollTop;     
         if (scrolling === true && prevScrollPos < currentScrollPos && currentScrollPos > 2) {
@@ -45,7 +37,6 @@ $(window).on("load", function() {
             scrolling = true; 
         })    
         hidingMenu = setInterval(hideShowMenuScroll, 100);
-        hidingBlurb = setInterval(hideBlurbOnScroll, 100);
     }
     function desktopMenuUX() {   
         clearInterval(hidingMenu);
