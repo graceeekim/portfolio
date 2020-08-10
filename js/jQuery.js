@@ -70,5 +70,5 @@ $(window).on("load", function() {
         clearInterval(hidingMenu);
         clearInterval(hidingBlurb);
         checkScreenSize();   
-    }) 
+    })
 });
