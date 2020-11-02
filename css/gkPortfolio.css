@@ -276,12 +276,7 @@ a:active {
 .for-carousel .image-container {
   height: calc((100vw - 40px) * 0.75);
 }
-@media screen and (orientation: landscape) and (max-width: 600px) {
-  .for-carousel .image-container {
-    height: calc(38.4vw * 0.75);
-  }
-}
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px), screen and (orientation: landscape) {
   .for-carousel .image-container {
     height: calc(38.4vw * 0.75);
   }
