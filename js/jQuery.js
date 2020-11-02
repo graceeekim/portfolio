@@ -124,10 +124,10 @@ $(window).on("load", function() {
     // $("#contact").css("padding-top", paddingSpace);    
 });
 $(document).ready(function() { 
-    $('.project-container').on("mouseenter mousedown touchstart touchmove", function(){
+    $('.project-container').on("mouseenter mousedown touchstart", function(){
         $(this).find("img.thumbnail").css("transform", "scale(1.05)");    
     })
-    $('.project-container').on("mouseleave touchstart touchmove", function(){
+    $('.project-container').on("mouseleave touchend", function(){
         $(this).find("img.thumbnail").css("transform", "scale(1)");    
     })      
 });
