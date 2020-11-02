@@ -1,7 +1,3 @@
-// issues I need to fix:
-
-// next step: make div for about blurbs, create grid for that, find way to align to bottom of photo;
-// resizing padding issues
 $(window).on("load", function() {
 
 //  VARIABLES
@@ -125,9 +121,11 @@ $(window).on("load", function() {
 });
 $(document).ready(function() { 
     $('.project-container').on("mouseenter mousedown touchstart", function(){
-        $(this).find("img.thumbnail").css("transform", "scale(1.05)");    
+        $(this).find("img.thumbnail").css("transform", "scale(1.05)");
+        $(this).find("h1").css("color", "#f37053");            
     })
-    $('.project-container').on("mouseleave touchend", function(){
-        $(this).find("img.thumbnail").css("transform", "scale(1)");    
+    $('.project-container').on("mouseleave mouseup touchend", function(){
+        $(this).find("img.thumbnail").css("transform", "scale(1)");
+        $(this).find("h1").css("color", "black");             
     })      
 });
