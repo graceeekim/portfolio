@@ -120,11 +120,11 @@ $(window).on("load", function() {
     // $("#contact").css("padding-top", paddingSpace);    
 });
 $(document).ready(function() { 
-    $('.project-container').on("mouseenter mousedown touchstart", function(){
+    $('.project-container').on("mouseenter mousedown touchstart touchmove", function(){
         $(this).find("img.thumbnail").css("transform", "scale(1.05)");
         $(this).find("h1").css("color", "#f37053");            
     })
-    $('.project-container').on("mouseleave mouseup touchend", function(){
+    $('.project-container').on("mouseleave mouseup touchend touchcancel", function(){
         $(this).find("img.thumbnail").css("transform", "scale(1)");
         $(this).find("h1").css("color", "black");             
     })      
