@@ -1,9 +1,7 @@
-/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
-/* edit about me blurb to have 1 column 3 row text for tablet view */
 * {
   text-decoration: none;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+@media screen and (min-width: 767px), (min-width: 600px) {
   * {
     box-sizing: border-box;
   }
@@ -14,146 +12,86 @@
 }
 
 body {
-  height: 100%;
-  background-color: #fee6d3;
+  background-color: #fcf9f3;
   margin: 0 20px 0px 20px;
   font-size: 100%;
-  scroll-behaviour: smooth;
+  box-sizing: border-box;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+@media screen and (min-width: 767px), (min-width: 600px) {
   body {
-    margin: 0 0 0 20px;
-  }
-}
-
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #about {
-    margin: 0 20px 0 20px;
+    margin: 0 10%;
   }
 }
 
 p {
   font-family: degular, sans-serif;
-  font-size: 90%;
+  font-size: 100;
   margin: 0;
 }
 
-.container {
+#header, #main-content, #footer {
   width: 100%;
-  overflow-x: hidden;
-  display: grid;
-  grid: [row1-start] "header" auto [row1-end] [row2-start] "sidebar" auto [row2-end] [row3-start] "main" auto [row2-end] [row4-start] "footer" auto [row3-end]/100%;
-  gap: 20px;
-  align-items: start;
-  box-sizing: border-box;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  .container {
-    grid: [row1-start] "header main" auto [row1-end] [row2-start] "sidebar main" 1fr [row2-end] [row3-start] "footer main" auto [row3-end]/1fr 3fr;
-    width: 100%;
-    max-height: 100vh;
-    min-height: 100vh;
-  }
-}
-
-#header, #sidebar, #main-content, #footer {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 #header {
-  width: calc(100vw - 40px);
   grid-area: header;
-  position: fixed;
   top: 0;
-  left: 20px;
-  right: 20px;
-  background-color: #fee6d3;
+  z-index: 99999;
+  align-items: center;
+  transition: all 0.2s ease-out;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+@media screen and (min-width: 767px), (min-width: 600px) {
   #header {
-    width: auto;
-    position: relative;
+    position: fixed;
     left: 0;
     right: 0;
+    padding-bottom: 0;
   }
 }
 
-#sidebar {
-  grid-area: sidebar;
-  justify-content: center;
-}
-
-#main-content {
-  grid-area: main;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #main-content {
-    max-height: 100%;
-    min-height: 100%;
-    overflow: scroll;
-  }
-}
-
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #about #main-content {
-    padding-bottom: 20px;
-  }
-}
-
-#about-me {
-  display: grid;
-  grid: [row1-start] "intro" auto [row1-end] [row2-start] "bio" auto [row2-end] [row3-start] "experience" auto [row3-end] [row4-start] "skills" auto [row4-end] [row5-start] "contact" auto [row5-end]/100%;
-  gap: 20px;
-  align-content: start;
-}
-@media screen and (min-width: 481px) {
-  #about-me {
-    grid: [row1-start] "intro" auto [row1-end] [row2-start] "bio" auto [row2-end] [row3-start] "experience" auto [row3-end] [row4-start] "skills" auto [row4-end] [row5-start] "contact" 1fr [row5-end]/auto;
-    width: 100%;
-    max-height: 100%;
-    min-height: 100%;
-  }
-}
-@media screen and (min-width: 767px) {
-  #about-me {
-    grid: [row1-start] "intro intro intro" auto [row1-end] [row2-start] "bio experience skills" 1fr [row2-end] [row3-start] "contact contact contact" auto [row3-end]/auto;
-    width: 100%;
-    max-height: 100%;
-    min-height: 100%;
-  }
+.about #main-content {
+  justify-content: flex-start;
 }
 
 #footer {
-  grid-area: footer;
-  align-items: end;
-  padding-bottom: 20px;
-  align-self: end;
+  font-size: 0.75rem;
+  color: grey;
+  padding: 20px 0 40px 0;
 }
-
-.site-logo {
-  width: 100%;
-  justify-content: flex-start;
-  font-family: playfair-display, serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24pt;
-}
-.site-logo a {
-  text-decoration: none;
+@media screen and (min-width: 767px), (min-width: 600px) {
+  #footer {
+    padding: 2% 0 4% 0;
+  }
 }
 
 #gk {
+  padding-left: 0;
+  font-family: playfair-display, serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 36pt;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+@media screen and (min-width: 767px), (min-width: 600px) {
   #gk {
-    font-size: 40pt;
+    padding-left: 2%;
+    font-size: 54pt;
   }
 }
-#menu-about {
-  color: #f37053;
+
+#site-pages {
+  display: flex;
+  padding-right: 0;
+  text-align: right;
 }
+@media screen and (min-width: 767px), (min-width: 600px) {
+  #site-pages {
+    padding-right: 2%;
+  }
+}
+
 .menu-link {
   font-family: degular, sans-serif;
   font-weight: 400;
@@ -161,85 +99,57 @@ p {
   font-size: 1.25em;
   padding: 0px 0px 0px 20px;
 }
-/* .menu-link a {
+.menu-link a {
   color: grey;
-} */
-@media screen and (min-width: 767px), (min-width: 481px) {
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
   .menu-link {
-    font-size: 1em;
-    padding: 20px 20px 0px 0px;
+    font-size: 16pt;
   }
 }
 
 .icon {
   height: 20px;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+@media screen and (min-width: 767px), (min-width: 600px) {
   .icon {
     height: 20px;
   }
 }
 
-#header-nav {
+.header-blurb {
   width: 100%;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #header-nav {
-    flex-flow: row wrap;
-    box-sizing: border-box;
-  }
-}
-
-#site-pages {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #site-pages {
-    justify-content: flex-start;
-  }
-}
-
-#header-blurb {
-  width: 100%;
-  padding: 20px 0px 20px 0px;
-  border: #f37053 2px;
-  border-style: none none solid none;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #header-blurb {
-    border-style: solid none none none;
-    grid-area: intro;
-  }
-}
-
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #about #header-blurb {
-    border-style: solid none none none;
-  }
-}
-
-#header-blurb > p {
-  font-size: 1.5rem;
+  padding: 40px 0;
+  font-size: 7vw;
   font-family: freight-display-pro, serif;
   font-weight: 600;
+  line-height: 1.2;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #header-blurb > p {
-    font-size: 2.5vw;
-    font-family: freight-display-pro, serif;
-    font-weight: 600;
+@media screen and (min-width: 767px), (min-width: 600px) {
+  .header-blurb {
+    padding: 20% 0 10% 0;
+    font-size: 6vw;
     line-height: 1.1;
   }
 }
 
-#footer {
-  font-size: 0.75rem;
-  color: grey;
+#about-blurb {
+  width: 100%;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
+  #about-blurb {
+    padding-bottom: 10%;
+  }
+}
+
+#project-blurb {
+  padding: 0 20px 0 0;
+}
+
+#contact {
+  text-decoration: underline;
+  padding-right: 20px;
 }
 
 ul {
@@ -249,48 +159,119 @@ ul {
 }
 
 a {
-  color: #f37053;
+  color: black;
 }
 a:hover {
+  color: #f37053;
+}
+
+.purpleLink {
+  color: #f37053;
+}
+.purpleLink:hover {
   color: #522e91;
 }
 
-a.active-page {
-  color: red;
+.blackLink {
+  color: black;
+}
+.blackLink:hover {
+  color: black;
+}
+
+.svg-inline--fa {
+  font-size: 25px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
+  .svg-inline--fa {
+    font-size: 50px;
+  }
 }
 
 .image-container {
-  height: 100%;
+  display: flex;
   width: 100%;
-  max-height: 600px;
+  height: calc((100vw - 40px) * 0.75);
   max-width: 1300px;
+  overflow: hidden;
 }
-
-.image-container--circular {
-  border-radius: 50%;
-  text-align: center;
+@media screen and (min-width: 767px), (min-width: 600px) {
+  .image-container {
+    height: calc(38.4vw * 0.5625);
+  }
 }
 
 .thumbnail {
   display: block;
   width: 100%;
   object-fit: cover;
+  object-position: center;
+  transition: all 0.2s ease-in-out;
+}
+
+#project-carousel {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
+  #project-carousel {
+    width: 100%;
+  }
 }
 
 .project-container {
   width: 100%;
+  top: 0;
   padding: 0px 0px 20px 0px;
   display: flex;
   flex-flow: column nowrap;
+  overflow: hidden;
 }
-@media screen and (min-width: 767px), (min-width: 481px) {
+.project-container:hover {
+  transition: all 0.1s ease-in;
+}
+.project-container:not(:hover) {
+  transition: all 0.1s ease-out;
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
   .project-container {
-    margin: 0 0 0 0;
+    width: 48%;
+    padding: 0 0 4% 0;
   }
 }
 
-.project-container.last {
-  padding: 0;
+.project-container p {
+  color: black;
+}
+.project-container p:hover {
+  color: black;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+.for-carousel {
+  width: 48%;
+}
+@media screen and (min-width: 767px) {
+  .for-carousel {
+    width: 30.75%;
+  }
+}
+
+.for-carousel .image-container {
+  height: calc((48vw - 40px )* 0.75);
+}
+@media screen and (min-width: 767px) {
+  .for-carousel .image-container {
+    height: calc(20.4vw * 0.75);
+  }
 }
 
 .project-description {
@@ -298,18 +279,43 @@ a.active-page {
   margin: 0px;
   padding: 20px 40px 20px 20px;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) {
   .project-description {
     padding: 20px 20px;
   }
 }
 @media screen and (min-width: 767px) {
   .project-description {
-    padding: 20px 40px;
+    padding: 20px 40px 30px 30px;
     width: 100%;
-    height: 100%;
     z-index: 1;
     align-self: flex-start;
+  }
+}
+
+.test-hover {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+
+.display:hover {
+  transition: all 0.1s ease-in;
+}
+.display:not(:hover) {
+  transition: all 0.1s ease-out;
+}
+@media screen and (min-width: 767px), (min-width: 600px) {
+  .display {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 767px), (min-width: 600px) {
+  .hideshow {
+    position: relative;
+    top: -137px;
+    margin-bottom: -137px;
   }
 }
 
@@ -318,57 +324,34 @@ a.active-page {
   background-color: white;
 }
 
-h1 {
-  margin: 0 0 5px 0;
-  font-family: freight-display-pro;
-  font-size: 175%;
-}
-
-h2 {
-  font-size: 2rem;
+h1, h2, h3, h4, h5, h6 {
   font-family: freight-display-pro, serif;
-  font-weight: 600;
   margin: 0;
 }
 
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 225%;
+}
+
+h3 {
+  font-size: 200%;
+}
+
 h4 {
-  font-size: 1.5rem;
+  font-size: 175%;
 }
 
-#portrait {
-  width: 75%;
-  padding: 20px 0px 20px 0px;
-  border-radius: 50%;
-}
-@media screen and (min-width: 767px), (min-width: 481px) {
-  #portrait {
-    width: 100%;
-    border: #f37053 2px;
-    border-style: solid none none none;
-    border-radius: 0%;
-  }
+h5 {
+  font-size: 150%;
 }
 
-#bio {
-  grid-area: bio;
-}
-
-#experience {
-  grid-area: experience;
-}
-
-#skills {
-  grid-area: skills;
-}
-
-#bio, #experience, #skills {
-  align-self: start;
-}
-
-#contact {
-  grid-area: contact;
-  font-size: 100%;
-  align-self: end;
+h6 {
+  font-size: 125%;
 }
 
 /*# sourceMappingURL=gkPortfolio.css.map */
