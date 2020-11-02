@@ -264,7 +264,7 @@ a:active {
 .for-carousel {
   width: 100%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px), screen and (orientation: landscape) and (max-width: 800px) {
   .for-carousel {
     width: 48%;
   }
@@ -275,22 +275,21 @@ a:active {
   }
 }
 
-.for-carousel .project-container {
+.for-carousel .image-container {
   height: calc((100vw - 40px) * 0.75);
 }
 @media screen and (orientation: landscape) and (max-width: 800px) {
-  .for-carousel .project-container {
-    width: 48%;
+  .for-carousel .image-container {
     height: calc(38.4vw * 0.75);
   }
 }
 @media screen and (min-width: 800px) {
-  .for-carousel .project-container {
+  .for-carousel .image-container {
     height: calc(38.4vw * 0.75);
   }
 }
 @media screen and (min-width: 1300px) {
-  .for-carousel .project-container {
+  .for-carousel .image-container {
     height: calc(20.4vw * 0.75);
   }
 }
