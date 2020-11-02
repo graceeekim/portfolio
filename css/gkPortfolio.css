@@ -260,7 +260,12 @@ a:active {
 }
 
 .for-carousel {
-  width: 48%;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .for-carousel {
+    width: 48%;
+  }
 }
 @media screen and (min-width: 767px) {
   .for-carousel {
@@ -269,11 +274,16 @@ a:active {
 }
 
 .for-carousel .image-container {
-  height: calc((48vw - 40px )* 0.75);
+  height: calc((100vw - 40px) * 0.75);
+}
+@media screen and (min-width: 600px) {
+  .for-carousel .image-container {
+    height: calc(38.4vw * 0.5625);
+  }
 }
 @media screen and (min-width: 767px) {
   .for-carousel .image-container {
-    height: calc(20.4vw * 0.75);
+    height: calc(20.4vw * 0.5625);
   }
 }
 
