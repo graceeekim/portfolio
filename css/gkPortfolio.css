@@ -1,5 +1,3 @@
-/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
-/* see old files for about grid, like bio, clients, etc. */
 * {
   text-decoration: none;
 }
@@ -166,6 +164,9 @@ a {
 a:hover {
   color: #f37053;
 }
+a:active {
+  color: #f37053;
+}
 
 .purpleLink {
   color: #f37053;
@@ -293,37 +294,6 @@ a:hover {
     z-index: 1;
     align-self: flex-start;
   }
-}
-
-.test-hover {
-  width: 500px;
-  height: 500px;
-  background-color: red;
-}
-
-.display:hover {
-  transition: all 0.1s ease-in;
-}
-.display:not(:hover) {
-  transition: all 0.1s ease-out;
-}
-@media screen and (min-width: 767px), (min-width: 600px) {
-  .display {
-    opacity: 0;
-  }
-}
-
-@media screen and (min-width: 767px), (min-width: 600px) {
-  .hideshow {
-    position: relative;
-    top: -137px;
-    margin-bottom: -137px;
-  }
-}
-
-.empty {
-  width: 100%;
-  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
