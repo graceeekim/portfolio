@@ -1,5 +1,4 @@
 /* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
-/* see old files for about grid, like bio, clients, etc. */
 * {
   text-decoration: none;
 }
@@ -40,6 +39,7 @@ p {
 
 #header {
   grid-area: header;
+  position: fixed;
   top: 0;
   z-index: 99999;
   align-items: center;
@@ -47,7 +47,6 @@ p {
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   #header {
-    position: fixed;
     left: 0;
     right: 0;
     padding-bottom: 0;
@@ -85,7 +84,7 @@ p {
 
 #site-pages {
   display: flex;
-  padding-right: 0;
+  padding-right: 40px;
   text-align: right;
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
