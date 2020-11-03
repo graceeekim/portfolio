@@ -128,7 +128,7 @@ p {
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   .header-blurb {
-    padding: 10% 0 10% 0;
+    padding: 5% 0 5% 0;
     font-size: 6vw;
     line-height: 1.1;
   }
@@ -150,7 +150,6 @@ p {
 
 #contact {
   text-decoration: underline;
-  padding-right: 20px;
 }
 
 ul {
@@ -309,6 +308,12 @@ a:active {
     width: 100%;
     z-index: 1;
     align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1300px), (min-width: 800px) {
+  .mobile-linebreak {
+    display: none;
   }
 }
 
