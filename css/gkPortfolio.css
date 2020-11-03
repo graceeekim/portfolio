@@ -58,7 +58,7 @@ p {
 }
 
 #footer {
-  font-size: 0.75rem;
+  font-size: 0.75em;
   color: grey;
   padding: 20px 0 40px 0;
 }
@@ -73,23 +73,31 @@ p {
   font-family: playfair-display, serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 36pt;
+  font-size: 3em;
 }
-@media screen and (min-width: 1300px), (min-width: 800px) {
+@media screen and (min-width: 800px) {
   #gk {
     padding-left: 2%;
-    font-size: 54pt;
+    font-size: 3.5em;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #gk {
+    padding-left: 2%;
+    font-size: 4.5em;
   }
 }
 
 #site-pages {
   display: flex;
+  flex-flow: row nowrap;
   padding-right: 40px;
   text-align: right;
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   #site-pages {
     padding-right: 2%;
+    flex-flow: column wrap;
   }
 }
 
