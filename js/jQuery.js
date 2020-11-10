@@ -68,10 +68,10 @@ $(document).ready(function() {
 
         if (window.location.href.indexOf('test') > -1 ) {
             $("#menu-about").on("click", function(){
-                $("#main-content").load("ajax/about-content.html #main-content", function() {
+                $("#main-content").load("about.html #main-content", function() {
                     console.log("loaded!")
                 })
-            history.pushState(null, "this is a test", "ajax/about-content.html");
+            history.pushState(null, "this is a test", "about.html");
             })
         }    
 });
