@@ -68,7 +68,9 @@ $(document).ready(function() {
 
         if (window.location.href.indexOf('test') > -1 ) {
             $("#menu-about").on("click", function(){
-                $("#main-content").load("ajax/about-content.html");
+                $("#main-content").load("ajax/about-content.html", function() {
+                    console.log("loaded!")
+                });
             })
         }    
 });
