@@ -116,6 +116,10 @@ p {
   }
 }
 
+.show-on-load {
+  display: none;
+}
+
 .icon {
   height: 20px;
 }

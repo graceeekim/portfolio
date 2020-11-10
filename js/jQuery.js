@@ -72,6 +72,7 @@ $(document).ready(function() {
                     console.log("loaded!")
                 })
             history.pushState(null, "this is a test", "about.html");
+            $("#main-content").fadeIn("slow");
             })
         }    
 });
