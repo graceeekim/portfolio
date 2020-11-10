@@ -43,7 +43,6 @@ p {
   top: 0;
   z-index: 99999;
   align-items: center;
-  transition: all 0.2s ease-out;
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   #header {
@@ -136,7 +135,7 @@ p {
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   .header-blurb {
-    padding: 5% 0 5% 0;
+    padding: 5% 0;
     font-size: 6vw;
     line-height: 1.1;
   }
@@ -203,7 +202,7 @@ a:active {
 .image-container {
   display: flex;
   width: 100%;
-  height: calc((100vw - 40px) * 0.75);
+  height: calc((100vw - 40px) * 0.5625);
   max-width: 1300px;
   overflow: hidden;
 }
