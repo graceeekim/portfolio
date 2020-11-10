@@ -1,0 +1,294 @@
+/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
+
+$coral: #f37053;
+$coral-A: rgb(243, 112, 83, 0.5);
+$purple: #522e91;
+$salmon: #fcf9f3;
+
+$serifLogo: playfair-display, serif;
+$serifDisplay: freight-display-pro, serif;
+$sansSerifDisplay: degular, sans-serif;
+$sansSerifText: degular-text, sans-serif;
+
+$breakpoint-mobile: 0px;
+$breakpoint-tablet: 800px;
+$breakpoint-desktop: 1300px;
+
+* {
+	text-decoration: none;
+		@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+			box-sizing: border-box;
+	}
+}
+::selection {
+	background-color: $coral-A;
+}
+body {
+	background-color: $salmon;	
+	margin: 0 20px 0px 20px;
+	font-size: 100%;
+	box-sizing: border-box;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		margin: 0 10%;
+	}	
+}
+p {
+	font-family: $sansSerifText;
+	font-size: 100;
+	margin: 0;
+}
+#header, #main-content, #footer {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+#header {
+	grid-area: header;
+	position: fixed;
+	top: 0;	
+	z-index: 99999;
+	align-items: center;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		left: 0;
+		right: 0;
+		padding-bottom: 0;
+	}	
+}
+#main-content {
+	display: none;
+}
+.about #main-content {
+	justify-content: flex-start;
+}
+#footer {
+	font-size: 0.75em;
+	color: grey;
+	padding: 20px 0 20px 0;
+		@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		padding: 2% 0;
+		}	
+}
+$test: 3em;
+#gk {
+	padding-left: 0;
+	font-family: playfair-display, serif;
+	font-style: normal;
+	font-weight: 700;	
+	font-size: 3em;
+	@media screen and (min-width: $breakpoint-tablet) {
+		padding-left: 2%;
+		font-size: 3.5em;
+	}
+	@media screen and (min-width: $breakpoint-desktop) {
+		padding-left: 2%;
+		font-size: #{$test * 1.5};
+	}			
+}
+#site-pages {
+	display: flex;
+	flex-flow: row nowrap;
+	padding-right: 40px;
+	text-align: right;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		padding-right: 2%;	
+		flex-flow: column wrap;
+		}	
+}
+.menu-link {
+	font-family: degular,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.25em;
+	padding: 0px 0px 0px 20px;
+		a {
+			color: grey;
+		}
+		@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		font-size: 16pt;
+	}
+}
+.icon {
+	height: 20px;
+
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		height: 20px;
+		}
+}
+.header-blurb {
+	width: 100%;
+	padding: 40px 0;
+	font-size: 7vw;
+	font-family: $serifDisplay, serif;
+	font-weight: 600;	
+	line-height: 1.2;	
+		@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+			padding: 5% 0;
+			font-size: 6vw;
+			line-height: 1.1;				
+		}
+}
+#about-blurb {
+	width: 100%;
+	padding-bottom: 60px;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		padding-bottom: 10%;
+		}	
+}
+#project-blurb {
+	padding: 0 20px 0 0;
+}
+#contact {
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: black;
+	&:hover {
+	color: $coral;
+	}
+	&:active {
+	color: $coral;
+	}
+}
+.purpleLink {
+	color: $coral;
+	&:hover {
+	color: $purple;
+	}
+}
+.blackLink {
+	color: black;
+	&:hover {
+	color: black;
+	}
+}
+.svg-inline--fa {
+	font-size: 25px;
+	padding-right: 20px; 
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		font-size: 50px;
+		}	
+}
+.image-container {
+	display: flex;
+	width: 100%;
+	height: calc((100vw - 40px) * 0.5625);
+	max-width: 1300px;
+	overflow: hidden;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		height: calc(38.4vw * 0.5625)
+	}
+}
+.thumbnail {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.2s ease-in-out;
+}
+#project-carousel {
+	width: 100%;
+	display: inline-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;	
+	overflow: hidden;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		width: 100%;
+	}
+}
+.project-container {
+	width: 100%;
+	top: 0;
+	padding: 0px 0px 20px 0px;
+	display: flex;
+	flex-flow: column nowrap;
+	overflow: hidden;
+	&:hover {
+		transition: all 0.1s ease-in;
+	}
+	&:not(:hover){
+		transition: all 0.1s ease-out;
+	}
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		width: 48%;
+		padding: 0 0 4% 0;
+		}
+}
+.project-container p {
+	color: black;
+	&:hover {
+		color: black;
+	}
+}
+.project-image {
+	width: 100%;
+	height: auto;
+}
+.for-carousel {
+	width: 100%;
+	@media screen and (min-width: $breakpoint-tablet), screen and (orientation: landscape) and (max-width: $breakpoint-tablet) {
+		width: 48%;
+	}		
+	@media screen and (min-width: $breakpoint-desktop) {
+		width: 30.75%;
+	}		
+}
+.for-carousel .image-container {
+	height: calc((100vw - 40px) * 0.5625);
+	@media screen and (orientation: landscape) and (max-width: $breakpoint-tablet) {
+		height: calc(38.4vw * 0.5625);
+	}
+	@media screen and (min-width: $breakpoint-tablet) {
+		height: calc(38.4vw * 0.5625);
+	}		
+	@media screen and (min-width: $breakpoint-desktop) {
+		height: calc(20.4vw * 0.5625);
+	}		
+}
+.project-description {
+	background-color: white;
+	margin: 0px;
+	padding: 20px 40px 20px 20px;
+		@media screen and (min-width: $breakpoint-tablet) {
+		padding: 20px 20px;
+		}	
+		@media screen and (min-width: $breakpoint-desktop) {
+		padding: 20px 40px 30px 30px;
+		width: 100%;
+		z-index: 1;
+		align-self: flex-start;
+		}
+}
+.mobile-linebreak {
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		display: none;
+	}	
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $serifDisplay, serif;
+	margin: 0;
+}
+h1 {
+	margin: 0 0 5px 0;
+	font-size: 200%;	
+}
+h2 {
+	font-size: 225%;
+}
+h3 {
+	font-size: 200%;
+}
+h4 {
+	font-size: 175%;
+}
+h5 {
+	font-size: 150%;
+}
+h6 {
+	font-size: 125%;
+}
