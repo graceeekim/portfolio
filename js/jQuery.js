@@ -71,7 +71,7 @@ $(document).ready(function() {
                 $("#main-content").load("ajax/about-content.html #main-content", function() {
                     console.log("loaded!")
                 })
-            history.pushState(null,null, "ajax/about-content.html");
+            history.pushState(null, "this is a test", "ajax/about-content.html");
             })
         }    
 });
