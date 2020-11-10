@@ -8,16 +8,16 @@ $(window).on("load", function() {
     function checkScrollPos() {
         var currentScrollPos = scrollTop;     
         if (scrolling === true && prevScrollPos < currentScrollPos && currentScrollPos > 2) {
-            $('#header').hide("fade", {direction: "down"}, 200);
+            $('#header').hide("fade", {direction: "up"}, 200);
         } else if (scrolling === false && prevScrollPos < currentScrollPos && currentScrollPos > 2) {
-            $('#header').hide("fade", {direction: "down"}, 200); 
+            $('#header').hide("fade", {direction: "up"}, 200); 
         } else if (scrolling === true && prevScrollPos > currentScrollPos || scrollTop <= 0) {
             $('#header').show("fade", {direction: "up"}, 200);
         } else if (scrolling === false && prevScrollPos > currentScrollPos || scrollTop <= 0) {
             $('#header').show("fade", {direction: "up"}, 200); 
         }
         prevScrollPos = currentScrollPos;  
-    } 
+    }     
     function hideShowMenuScroll() {
         contentPlacement = $('#header').height();
         $('#main-content').css('padding-top', contentPlacement); //NEED TO FIX
@@ -65,4 +65,10 @@ $(document).ready(function() {
     //
     pageNavCSS();
     scalePicOnHover();
+
+        if (window.location.href.indexOf('test') > -1 ) {
+            $("#menu-about").on("click", function(){
+                $("#main-content").load("ajax/about-content.html");
+            })
+        }    
 });
