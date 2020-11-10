@@ -70,7 +70,8 @@ $(document).ready(function() {
             $("#menu-about").on("click", function(){
                 $("#main-content").load("ajax/about-content.html #main-content", function() {
                     console.log("loaded!")
-                });
+                })
+            history.pushState(null,null, "ajax/about-content.html");
             })
         }    
 });
