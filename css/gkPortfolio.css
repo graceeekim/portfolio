@@ -51,11 +51,6 @@ p {
     padding-bottom: 0;
   }
 }
-
-#main-content {
-  display: none;
-}
-
 .about #main-content {
   justify-content: flex-start;
 }
