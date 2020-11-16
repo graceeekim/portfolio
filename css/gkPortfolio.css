@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 180%;
 }
 
 h2 {
@@ -412,7 +412,7 @@ button {
   width: 92%;
   padding: 20px;
   font-family: "hanbanhan", sans-serif;
-  font-size: 100px;
+  font-size: 72px;
   text-align: center;
   border: none;
   border-bottom: 1px solid #f37053;
