@@ -20,7 +20,7 @@ $(window).on("load", function() {
     }     
     function hideShowMenuScroll() {
         contentPlacement = $('#header').height();
-        $('#main-content').css('padding-top', contentPlacement); //NEED TO FIX
+        $('.main-content').css('padding-top', contentPlacement); //NEED TO FIX
         $(window).scroll(function() {
             scrolling = true; 
         })    
@@ -48,7 +48,7 @@ $(document).ready(function() {
         if (window.location.href.indexOf('about') > -1 ) {
             $("#menu-about").css("text-decoration", "underline");
         }
-        if (window.location.href.indexOf('index') > -1 ) {
+        if (window.location.href.indexOf('work') > -1 ) {
             $("#menu-work").css("text-decoration", "underline");
         } 
     }
@@ -62,17 +62,20 @@ $(document).ready(function() {
             $(this).find("h1").css("color", "black");             
         })  
     }
+    function changeHanbanCut(){
+        $("#hanCut").click(function(){
+            $("#hanbanPreview").css("font-family", "hanbanhan");
+            $("#hanCut").addClass("activeHanbanCut")
+            $("#banCut").removeClass("activeHanbanCut")
+        })
+        $("#banCut").click(function(){
+            $("#hanbanPreview").css("font-family", "hanbanban");
+            $("#banCut").addClass("activeHanbanCut")
+            $("#hanCut").removeClass("activeHanbanCut")
+        })    
+    }
     //
     pageNavCSS();
     scalePicOnHover();
-
-        if (window.location.href.indexOf('test') > -1 ) {
-            $("#menu-about").on("click", function(){
-                $("#main-content").load("about.html #main-content", function() {
-                    console.log("loaded!")
-                })
-            history.pushState(null, "this is a test", "about.html");
-            $("#main-content").fadeIn("slow");
-            })
-        }    
+    changeHanbanCut();
 });

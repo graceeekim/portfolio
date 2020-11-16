@@ -1,4 +1,7 @@
-/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css */
+/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css
+
+sass --watch /Library/WebServer/Documents/css
+*/
 
 $coral: #f37053;
 $coral-A: rgb(243, 112, 83, 0.5);
@@ -37,7 +40,7 @@ p {
 	font-size: 100;
 	margin: 0;
 }
-#header, #main-content, #footer {
+#header, .main-content, #projects-container, #footer {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
@@ -55,10 +58,14 @@ p {
 		padding-bottom: 0;
 	}	
 }
-#main-content {
-	display: none;
+
+.main-content {
+	/* display: none; */
+} 
+#projects-container {
+	padding-top: 5%;
 }
-.about #main-content {
+.about .main-content {
 	justify-content: flex-start;
 }
 #footer {
@@ -132,6 +139,7 @@ $test: 3em;
 	width: 100%;
 	padding-bottom: 60px;
 	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		width: 90%;
 		padding-bottom: 10%;
 		}	
 }
@@ -177,7 +185,7 @@ a {
 .image-container {
 	display: flex;
 	width: 100%;
-	height: calc((100vw - 40px) * 0.5625);
+	height: calc((100vw - 40px) * 0.75);
 	max-width: 1300px;
 	overflow: hidden;
 	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
@@ -227,6 +235,16 @@ a {
 }
 .project-image {
 	width: 100%;
+	height: calc((100vw - 40px) * 0.75);
+	object-fit: cover;
+	object-position: center;
+	padding-bottom: 20px;
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		height: calc(80vw * 0.5625);
+		padding-bottom: 5%;
+		}	
+}
+.no-height-limit {
 	height: auto;
 }
 .for-carousel {
@@ -239,15 +257,15 @@ a {
 	}		
 }
 .for-carousel .image-container {
-	height: calc((100vw - 40px) * 0.5625);
+	height: calc((100vw - 40px) * 0.75);
 	@media screen and (orientation: landscape) and (max-width: $breakpoint-tablet) {
-		height: calc(38.4vw * 0.5625);
+		height: calc(38.4vw * 0.75);
 	}
 	@media screen and (min-width: $breakpoint-tablet) {
-		height: calc(38.4vw * 0.5625);
+		height: calc(38.4vw * 0.75);
 	}		
 	@media screen and (min-width: $breakpoint-desktop) {
-		height: calc(20.4vw * 0.5625);
+		height: calc(20.4vw * 0.75);
 	}		
 }
 .project-description {
@@ -271,14 +289,13 @@ a {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $serifDisplay, serif;
-	margin: 0;
+	margin: 0 0 5px 0;
 }
 h1 {
-	margin: 0 0 5px 0;
 	font-size: 200%;	
 }
 h2 {
-	font-size: 225%;
+	font-size: 165%;
 }
 h3 {
 	font-size: 200%;
@@ -291,4 +308,59 @@ h5 {
 }
 h6 {
 	font-size: 125%;
+}
+@font-face {
+    font-family: 'hanbanban';
+    src: url('https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-ban-webfont.woff2?raw=true') format('woff2'),
+         url('https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-ban-webfont.woff?raw=true') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'hanbanhan';
+    src: url('https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-han-webfont.woff2?raw=true') format('woff2'),
+         url('https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-han-webfont.woff?raw=true') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+button {
+  	background-color: transparent;
+	font-family: $sansSerifText;
+	font-size: 16px;
+	padding: 5px 10px 5px 10px;
+	margin: 10px 0 10px 10px;
+	border-radius: 25px;
+	border: 1px solid $coral;
+	text-decoration: none;
+	cursor: pointer;
+}
+#hanbanTextBox {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5%;
+}
+#hanbanPreview {
+  width: 92%;
+  padding: 20px;
+  font-family: "hanbanhan", sans-serif;
+  font-size: 100px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #f37053;
+  background-color: transparent;
+  	&:focus {
+		outline: none;
+	}
+	@media screen and (min-width: $breakpoint-desktop), (min-width: $breakpoint-tablet) {
+		width: 100%;
+		font-size: 125px;
+	}		
+}
+#hanbanButtonHolder {
+	display: flex;
+	justify-content: flex-end;
+}
+.activeHanbanCut {
+	background-color: $coral;
+	color: white;
 }
