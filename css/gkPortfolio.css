@@ -33,7 +33,7 @@ p {
   margin: 0;
 }
 
-#header, .main-content, #projects-container, #footer {
+#header, .page-content, #projects-container, #footer {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -55,15 +55,15 @@ p {
   }
 }
 
-.main-content {
-  /* display: none; */
+.hide {
+  opacity: 0;
 }
 
 #projects-container {
   padding-top: 5%;
 }
 
-.about .main-content {
+.about .page-content {
   justify-content: flex-start;
 }
 
@@ -118,13 +118,20 @@ p {
   font-size: 1.25em;
   padding: 0px 0px 0px 20px;
 }
-.menu-link a {
-  color: grey;
-}
 @media screen and (min-width: 1300px), (min-width: 800px) {
   .menu-link {
     font-size: 16pt;
   }
+}
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.normalMenuLink {
+  color: grey;
+}
+.normalMenuLink:hover {
+  color: #f37053;
 }
 
 .icon {
@@ -158,7 +165,7 @@ p {
 }
 @media screen and (min-width: 1300px), (min-width: 800px) {
   #about-blurb {
-    width: 100%;
+    width: 90%;
     padding-bottom: 10%;
   }
 }
@@ -192,13 +199,6 @@ a:active {
 }
 .purpleLink:hover {
   color: #522e91;
-}
-
-.blackLink {
-  color: black;
-}
-.blackLink:hover {
-  color: black;
 }
 
 .svg-inline--fa {
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 180%;
+  font-size: 200%;
 }
 
 h2 {
@@ -380,36 +380,23 @@ h6 {
 
 @font-face {
   font-family: "hanbanban";
-  src: url("https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-ban-webfont.woff2?raw=true") format("woff2"), url("https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-ban-webfont.woff?raw=true") format("woff");
+  src: url("/fonts/hanban-ban-webfont.woff2") format("woff2"), url("/fonts/hanban-ban-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "hanbanhan";
-  src: url("https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-han-webfont.woff2?raw=true") format("woff2"), url("https://github.com/graceeekim/portfolio/blob/master/fonts/hanban-han-webfont.woff?raw=true") format("woff");
+  src: url("/fonts/hanban-han-webfont.woff2") format("woff2"), url("/fonts/hanban-han-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-button {
-  background-color: transparent;
-  font-family: degular-text, sans-serif;
-  font-size: 16px;
-  padding: 5px 10px 5px 10px;
-  margin: 10px 0 10px 10px;
-  border-radius: 25px;
-  border: 1px solid #f37053;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 #hanbanTextBox {
-  width: 100%;
+  display: block;
   text-align: center;
-  padding-bottom: 5%;
 }
 
 #hanbanPreview {
-  width: 92%;
+  width: 70%;
   padding: 20px;
   font-family: "hanbanhan", sans-serif;
   font-size: 72px;
@@ -420,22 +407,6 @@ button {
 }
 #hanbanPreview:focus {
   outline: none;
-}
-@media screen and (min-width: 1300px), (min-width: 800px) {
-  #hanbanPreview {
-    width: 100%;
-    font-size: 125px;
-  }
-}
-
-#hanbanButtonHolder {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.activeHanbanCut {
-  background-color: #f37053;
-  color: white;
 }
 
 /*# sourceMappingURL=gkPortfolio.css.map */
