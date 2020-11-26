@@ -390,16 +390,29 @@ h6 {
   font-weight: normal;
   font-style: normal;
 }
+button {
+  background-color: transparent;
+  font-family: degular-text, sans-serif;
+  font-size: 16px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px 0 10px 10px;
+  border-radius: 25px;
+  border: 1px solid #f37053;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #hanbanTextBox {
-  display: block;
+  width: 100%;
   text-align: center;
+  padding-bottom: 5%;
 }
 
 #hanbanPreview {
-  width: 70%;
+  width: 92%;
   padding: 20px;
   font-family: "hanbanhan", sans-serif;
-  font-size: 72px;
+  font-size: 100px;
   text-align: center;
   border: none;
   border-bottom: 1px solid #f37053;
@@ -407,6 +420,22 @@ h6 {
 }
 #hanbanPreview:focus {
   outline: none;
+}
+@media screen and (min-width: 1300px), (min-width: 800px) {
+  #hanbanPreview {
+    width: 100%;
+    font-size: 125px;
+  }
+}
+
+#hanbanButtonHolder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.activeHanbanCut {
+  background-color: #f37053;
+  color: white;
 }
 
 /*# sourceMappingURL=gkPortfolio.css.map */
