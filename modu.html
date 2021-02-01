@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>mod.u</title>
+		<title>mod.u Modular Clothing | Grace Kim</title>
 		
 		<meta charset="UTF-8">	
 		<meta name="viewport" content="width=device-width,initial-scale=1">	
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">		
 		<link rel="stylesheet" type="text/css" href="css/gkPortfolio.css">
 		<link rel="stylesheet" href="https://use.typekit.net/xko8ywd.css">
+		<link rel="preload" as="font" href="fonts/hanban-han-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="font" href="fonts/hanban-han-webfont.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="fonts/hanban-ban-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="font" href="fonts/hanban-ban-webfont.woff" type="font/woff" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/a37bdffb03.js" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
  				integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   				crossorigin="anonymous"></script>
+  		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<script type="text/javascript" src="js/jQuery.js"></script>
 	</head>
-	<body class="index">
-		<nav id="header">
-			<a id="gk" class="purpleLink" href="projects.html"> gk </a>
-			<ul id="site-pages">
-				<li class="menu-link"> 
-					<a id="menu-work" href="projects.html"> work </a>
-				</li>
-			</ul>
-		</nav>
-		<div class="main-content">
-			<p class="header-blurb">
-				mod.u
-			</p>
-			<p id="about-blurb">
-				mod.u is a clothing system and philosophy that explores the possibility of a modular clothing system as an alternative to fast fashion. Consisting of modules that can be mixed and matched to the wearer’s unique size, shape, and style, mod.u explores the possibility of clothing that can be adapted to the wearer’s needs.
-			</p>	
-			<div class="project-image">		
-				<img class="project-image" src="img/modu_outfit.jpg">
+	<body class="projects">
+		<div id="all-but-footer">
+			<nav id="header">
+				<a id="gk" class="purpleLink work" href="/work"> gk </a>
+				<ul id="site-pages">
+					<li class="menu-link"> 
+						<a id="menu-work" class="work" href="/work"> work </a>
+					</li>
+					<li class="menu-link">
+						<a id="menu-about" class="about" href="/about"> about </a>
+					</li>
+				</ul>
+			</nav>
+			<p id="intro-bio" class="header-blurb hide">
+				Hi! I'm Grace and I'm a <br>
+				Graphic Designer from Toronto. <br>
+			</p>				
+			<div id="content-container">			
+				<div class="modu page-content hide">
+					<p class="header-blurb">
+						<br>
+						mod.u
+					</p>
+					<p id="about-blurb">
+						mod.u is a clothing system and philosophy that explores the possibility of a modular clothing system as an alternative to fast fashion. Consisting of modules that can be mixed and matched to the wearer’s unique size, shape, and style, mod.u explores the possibility of clothing that can be adapted to the wearer’s needs.
+					</p>	
+					<div class="project-image">		
+						<img class="project-image" src="img/modu_outfit.jpg">
+					</div>
+					<div class="project-image">				
+						<img class="project-image" src="img/modu_model.jpg">
+					</div>	
+					<div class="project-image">		
+						<img class="project-image" src="img/modu_cover.jpg">			
+					</div>			
+					<div class="project-image">		
+						<img class="project-image" src="img/modu_lookbook_spread.jpg">			
+					</div>
+					<div class="project-image">				
+						<img class="project-image" src="img/modu_book_spread2.jpg">
+					</div>		
+					<div class="project-image">		
+						<img class="project-image" src="img/modu_packaging.jpg">			
+					</div>			
+					<div class="project-image no-height-limit">		
+						<img class="project-image no-height-limit" src="img/modu_variations.jpg">			
+					</div>
+					<div id="project-carousel" class="project-page">					
+						<p class="header-blurb"><br>Other Projects</p>
+						<div id="carousel-container">
+							<a href="/pathwise" class="pathwise for-carousel">
+								<img src="img/Pathwise_AnnualReport_Cover1.jpg" class="thumbnail">
+								<div class="project-description hide">
+									<h2>Pathwise Credit Union</h2>
+									<p>Various branded assets for the newly rebranded credit union</p>
+								</div>
+							</a>	
+							<a href="/hanban" class="hanban for-carousel">
+								<img src="img/Hanban_cover.jpg" class="thumbnail">
+								<div class="project-description hide">
+									<h2>Hanban</h2>
+									<p>A phonetically connected Korean-English typeface</p>
+								</div>						
+							</a>
+							<a href="/raw-pet-food" class="raw-pet-food for-carousel">
+								<img src="img/Pet_Cover.jpg" class="thumbnail">
+								<div class="project-description hide">
+									<h2>Raw Pet Food</h2>
+									<p>Website design for Canadian Raw Pet Food subscription service</p>
+								</div>
+							</a>
+							<a href="/modu" class="modu for-carousel">
+								<img src="img/modu_cover.jpg" class="thumbnail">
+								<div class="project-description hide">
+									<h2>mod.u</h2>
+									<p>Exploring modular clothing as an alternative to fast fashion</p>
+								</div>						
+							</a>							
+						</div>
+					</div>	
+				</div>	
 			</div>
-			<div class="project-image">				
-				<img class="project-image" src="img/modu_model.jpg">
-			</div>	
-			<div class="project-image">		
-				<img class="project-image" src="img/modu_cover.jpg">			
-			</div>			
-			<div class="project-image">		
-				<img class="project-image" src="img/modu_lookbook_spread.jpg">			
-			</div>
-			<div class="project-image">				
-				<img class="project-image" src="img/modu_book_spread2.jpg">
-			</div>		
-			<div class="project-image">		
-				<img class="project-image" src="img/modu_packaging.jpg">			
-			</div>			
-			<div class="project-image no-height-limit">		
-				<img class="project-image no-height-limit" src="img/modu_variations.jpg">			
-			</div>					
-			<p class="header-blurb"> Other Projects </p>
-			<div id="project-carousel">
-				<a href="pathwise.html" class="project-container for-carousel">
-					<div class="image-container">
-						<img src="img/Pathwise_AnnualReport_Cover1.jpg" class="thumbnail">
-					</div>
-					<div class="project-description">
-						<h2>Pathwise Credit Union</h2>
-						<p>Various branded assets for the newly rebranded credit union</p>
-					</div>
-				</a>	
-				<a href="hanban.html" class="project-container for-carousel">
-					<div class="image-container">
-						<img src="img/Hanban_cover.jpg" class="thumbnail">
-					</div>
-					<div class="project-description">
-						<h2>Hanban</h2>
-						<p>A phonetically connected Korean-English typeface</p>
-					</div>						
-				</a>
-				<a href="raw-pet-food.html" class="project-container for-carousel">
-					<div class="image-container">
-						<img src="img/Pet_Cover.jpg" class="thumbnail">
-					</div>
-					<div class="project-description">
-						<h2>Raw Pet Food</h2>
-						<p>Website design for Canadian Raw Pet Food subscription service</p>
-					</div>
-				</a>											
-			</div>
-		</div>			
+		</div>	
 		<div id="footer">
-			<p> © Grace Kim 2020</p>
+			<p> © Grace Kim </p>
+			<div class="social-icon-container">
+				<a href="https://www.instagram.com/graceeekim/" target="_blank" >
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/graceeekim/" target="_blank">
+					<i class="fab fa-linkedin-in"></i>
+				</a>				
+				<a href="mailto:gracekimj02@gmail.com?subject=Hi Grace!">
+					<i class="fas fa-envelope"></i>
+				</a>	
+			</div>				
 		</div>
 	</body>
 </html>
