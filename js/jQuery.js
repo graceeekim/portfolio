@@ -130,31 +130,40 @@ $(document).ready(function() {
     }
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
-        // if (pageURL = "index") {
-        //     history.pushState({}, "", "/work");
-        //      url = "/work";
-        // } else {
-            history.pushState({}, "", "/" + pageURL);
-            url = "/" + pageURL;
-        // }
+        history.pushState({}, "", "/" + pageURL);
+        url = "/" + pageURL;
         document.title = pageTitle + " | Grace Kim"; 
         projectCarouselFlickity();
         scalePicOnHover();
         pageNavCSS();
     } 
+    function loadPagePushStateIndex(pageURL, pageTitle) {
+        revealHideClass(pageURL);
+        history.pushState({}, "", "/work");
+        url = "/work"
+        document.title = pageTitle + " | Grace Kim"; 
+        projectCarouselFlickity();
+        scalePicOnHover();
+        pageNavCSS();
+    }     
     function loadPageContent(pageURL, pageTitle) {
         $("body").on("click", "a." + pageURL, function(e){
             e.preventDefault();
             e.stopPropagation();
             $("#content-container").load(pageURL + ".html .page-content", function(){
                 loadPagePushState(pageURL, pageTitle);  
-                if (pageURL = "index") {
-                    history.pushState({}, "", "/work");
-                     url = "/work";
-                }
             });     
         })        
      }
+    function loadPageContentIndex(pageURL, pageTitle) {
+        $("body").on("click", "a." + pageURL, function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $("#content-container").load(pageURL + ".html .page-content", function(){
+                loadPagePushStateIndex(pageURL, pageTitle);  
+            });     
+        })        
+     }     
     function updateScrollPos() {
         $(window).scroll(function() {
             scrollTop = window.scrollY;                        
@@ -172,7 +181,7 @@ $(document).ready(function() {
     updateScrollPos();
     hideShowMenuScroll();
     loadPageContent("about", "About");
-    loadPageContent("index", "Work");    
+    loadPageContentIndex("index", "Work");    
     loadPageContent("pathwise", "Pathwise Credit Union");
     loadPageContent("raw-pet-food", "Raw Pet Food Subscription Service");
 //
