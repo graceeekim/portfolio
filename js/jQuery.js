@@ -124,15 +124,15 @@ $(document).ready(function() {
         if (url.indexOf("raw-pet-food") > -1 ) {
             revealHideClass("raw-pet-food");
         } else
-        if (url === "/" || url.indexOf("work") > -1) {
-            revealHideClass("work");
+        if (url === "/") {
+            revealHideClass("index");
         }                               
     }
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
         if (pageURL = "index") {
-            history.pushState({}, "", "/work");
-             url = "/work";
+            history.pushState({}, "", "");
+             url = "";
         } else {
             history.pushState({}, "", "/" + pageURL);
             url = "/" + pageURL;
