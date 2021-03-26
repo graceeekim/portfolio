@@ -131,7 +131,11 @@ $(document).ready(function() {
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
         history.pushState({}, "", "/" + pageURL);
-        url = "/" + pageURL;
+        if (pageURL = "index") {
+             url = "/work";
+        } else {
+            url = "/" + pageURL;
+        }
         document.title = pageTitle + " | Grace Kim"; 
         projectCarouselFlickity();
         scalePicOnHover();
@@ -163,7 +167,7 @@ $(document).ready(function() {
     updateScrollPos();
     hideShowMenuScroll();
     loadPageContent("about", "About");
-    loadPageContent("work", "Work");    
+    loadPageContent("index", "Work");    
     loadPageContent("pathwise", "Pathwise Credit Union");
     loadPageContent("raw-pet-food", "Raw Pet Food Subscription Service");
 //
