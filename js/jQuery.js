@@ -73,12 +73,12 @@ $(document).ready(function() {
         } else {
             removeUnderlinePageCSS("about");  
         }     
-        if (url === "/" || url.indexOf("work") > -1 ) {
+        if (url === "/" || url.indexOf("work") > -1 || url.indexOf("index") > -1 ) {
             underlinePageNav("index"); 
         } else {
             removeUnderlinePageCSS("index");
         }          
-        if (url.indexOf("about") > -1  || url.indexOf("work") > -1 || url === "/") {                           
+        if (url.indexOf("about") > -1  || url.indexOf("work") > -1 || url === "/" || url.indexOf("index") > -1 ) {                           
         } else {
             removeUnderlinePageCSS("index");
             removeUnderlinePageCSS("about");     
@@ -181,6 +181,7 @@ $(document).ready(function() {
     updateScrollPos();
     hideShowMenuScroll();
     loadPageContent("about", "About");
+    loadPageContent("work", "Work");  
     loadPageContentIndex("index", "Work");    
     loadPageContent("pathwise", "Pathwise Credit Union");
     loadPageContent("raw-pet-food", "Raw Pet Food Subscription Service");
