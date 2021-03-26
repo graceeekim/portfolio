@@ -130,13 +130,13 @@ $(document).ready(function() {
     }
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
-        if (pageURL = "index") {
-            history.pushState({}, "", "/work");
-             url = "/work";
-        } else {
+        // if (pageURL = "index") {
+        //     history.pushState({}, "", "/work");
+        //      url = "/work";
+        // } else {
             history.pushState({}, "", "/" + pageURL);
             url = "/" + pageURL;
-        }
+        // }
         document.title = pageTitle + " | Grace Kim"; 
         projectCarouselFlickity();
         scalePicOnHover();
@@ -147,7 +147,11 @@ $(document).ready(function() {
             e.preventDefault();
             e.stopPropagation();
             $("#content-container").load(pageURL + ".html .page-content", function(){
-                loadPagePushState(pageURL, pageTitle);        
+                loadPagePushState(pageURL, pageTitle);  
+                if (pageURL = "index") {
+                    history.pushState({}, "", "/work");
+                     url = "/work";
+                }
             });     
         })        
      }
