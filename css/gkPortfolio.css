@@ -723,15 +723,41 @@ button:hover {
 
 /* position dots in carousel */
 .flickity-page-dots {
-  display: none;
+  top: 105%;
+  text-align: left;
+}
+@media only screen and (min-width: 900px) {
+  .flickity-page-dots {
+    display: none;
+  }
 }
 
-/* white circles */
 .flickity-page-dots .dot {
-  display: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #f37053;
+  margin: 0 1rem 0 0;
+}
+.flickity-page-dots .dot:hover {
+  background: #f37053;
+}
+@media only screen and (min-width: 900px) {
+  .flickity-page-dots .dot {
+    display: none;
+  }
 }
 
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
-  display: none;
+  background: rgba(243, 112, 83, 0.5);
+}
+.flickity-page-dots .dot.is-selected:hover {
+  background: #f37053;
+}
+@media only screen and (min-width: 900px) {
+  .flickity-page-dots .dot.is-selected {
+    display: none;
+  }
 }
