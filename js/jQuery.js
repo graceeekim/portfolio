@@ -130,13 +130,13 @@ $(document).ready(function() {
     }
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
-        if (pageURL = "index") {
+        // if (pageURL = "index") {
             history.pushState({}, "", "");
              url = "";
-        } else {
+        // } else {
             history.pushState({}, "", "/" + pageURL);
             url = "/" + pageURL;
-        }
+        // }
         document.title = pageTitle + " | Grace Kim"; 
         projectCarouselFlickity();
         scalePicOnHover();
