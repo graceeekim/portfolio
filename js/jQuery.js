@@ -124,7 +124,7 @@ $(document).ready(function() {
         if (url.indexOf("raw-pet-food") > -1 ) {
             revealHideClass("raw-pet-food");
         } else
-        if (url === "/") {
+        if (url === "/") || url.indexOf("index") > -1 || (url.indexOf("work") > -1 ) {
             revealHideClass("index");
         }                               
     }
