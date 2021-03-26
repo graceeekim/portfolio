@@ -74,13 +74,13 @@ $(document).ready(function() {
             removeUnderlinePageCSS("about");  
         }     
         if (url === "/" || url.indexOf("work") > -1 ) {
-            underlinePageNav("work"); 
+            underlinePageNav("index"); 
         } else {
-            removeUnderlinePageCSS("work");
+            removeUnderlinePageCSS("index");
         }          
         if (url.indexOf("about") > -1  || url.indexOf("work") > -1 || url === "/") {                           
         } else {
-            removeUnderlinePageCSS("work");
+            removeUnderlinePageCSS("index");
             removeUnderlinePageCSS("about");     
         }                         
     }
@@ -130,10 +130,11 @@ $(document).ready(function() {
     }
     function loadPagePushState(pageURL, pageTitle) {
         revealHideClass(pageURL);
-        history.pushState({}, "", "/" + pageURL);
         if (pageURL = "index") {
+            history.pushState({}, "", "/work");
              url = "/work";
         } else {
+            history.pushState({}, "", "/" + pageURL);
             url = "/" + pageURL;
         }
         document.title = pageTitle + " | Grace Kim"; 
