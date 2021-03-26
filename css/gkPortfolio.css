@@ -1,7 +1,3 @@
-/* sass --watch /Users/Grace/Misc.\ Files/Portfolio/Site/css:/Users/Grace/Misc.\ Files/Portfolio/Site/css
-
-sass --watch /Library/WebServer/Documents/css
-*/
 * {
   text-decoration: none;
   box-sizing: border-box;
@@ -739,5 +735,3 @@ button:hover {
 .flickity-page-dots .dot.is-selected {
   display: none;
 }
-
-/*# sourceMappingURL=gkPortfolioGH.css.map */
