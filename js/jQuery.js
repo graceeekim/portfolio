@@ -21,7 +21,7 @@ $(document).ready(function() {
             $('#header').show("fade", {direction: "up"}, 200);
         }        
         prevScrollPos = currentScrollPos;  
-    }   
+    }  
     function checkMedia(){
         if (url.indexOf("raw-pet-food") > -1) {
             var scrollTop = $(window).scrollTop() + tolerancePixel;
@@ -41,7 +41,7 @@ $(document).ready(function() {
     }
     function checkPausePlay() {
         $(document).on('scroll', checkMedia);
-    }        
+    }              
     function hideShowMenuScroll() {
         $(window).scroll(function() {
             scrolling = true;          
@@ -172,7 +172,7 @@ $(document).ready(function() {
     //   
     //    
     //
-    checkPausePlay();   
+    checkPausePlay(); 
     pageNavCSS();
     staticRevealHideClass();
     scalePicOnHover();
