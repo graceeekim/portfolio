@@ -268,19 +268,19 @@ section, .page-content {
   height: 100%;
 }
 .project-thumbnail.raw-pet-food {
-  background-image: url("img/pet/pet-food_mobile-screens.jpg");
+  background-image: url("/img/pet/pet-food_thumbnail.jpg");
 }
 .project-thumbnail.pathwise {
-  background-image: url("img/pathwise/pathwise_credit-card-ad.jpg");
+  background-image: url("/img/pathwise/pathwise_credit-card-ad.jpg");
 }
 .project-thumbnail.otsu {
-  background-image: url("img/otsu/otsu_overview_presentation.jpg");
+  background-image: url("/img/otsu/otsu_overview_presentation.jpg");
 }
 .project-thumbnail.otsu-esports {
-  background-image: url("img/esports/otsu_esports-arena-window-full.jpg");
+  background-image: url("/img/esports/otsu_esports-arena-window-full.jpg");
 }
 .project-thumbnail.otsu-initiatives {
-  background-image: url("img/otsu/otsu_logofolio.jpg");
+  background-image: url("/img/otsu/otsu_logofolio.jpg");
 }
 
 .project-description {
