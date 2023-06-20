@@ -59,7 +59,8 @@ $(document).ready(function() {
         } else {
             removeUnderlinePageCSS("index");
             removeUnderlinePageCSS("about");     
-        }                   
+        }   
+    }                
     function updateScrollPos() {
         $(window).scroll(function() {
             scrollTop = window.scrollY;                        
