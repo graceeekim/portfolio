@@ -155,26 +155,26 @@ ul {
   flex-flow: row wrap;
   justify-content: center;
 }
-.page-content.index {
+.page-content.index, .page-content.work {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   margin: 5rem 1rem 2rem 1rem;
 }
 @media only screen and (min-width: 480px) {
-  .page-content.index {
+  .page-content.index, .page-content.work {
     margin: 15vw 5vw 5vw 5vw;
   }
 }
 @media only screen and (min-width: 900px) {
-  .page-content.index {
+  .page-content.index, .page-content.work {
     grid-template-columns: 1fr 1fr;
     margin: 10vw;
     gap: 3rem;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .page-content.index {
+  .page-content.index, .page-content.work {
     gap: 4rem;
   }
 }
