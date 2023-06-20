@@ -268,19 +268,19 @@ section, .page-content {
   height: 100%;
 }
 .project-thumbnail.raw-pet-food {
-  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/pet/pet-food_mobile-screens.jpg?raw=true");
+  background-image: url("img/pet/pet-food_mobile-screens.jpg");
 }
 .project-thumbnail.pathwise {
-  background-image: url("https://www.graceeekim.com/img/pathwise_credit-card-ad.jpg");
+  background-image: url("img/pathwise/pathwise_credit-card-ad.jpg");
 }
 .project-thumbnail.otsu {
-  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/otsu/otsu_gov-training_pages.jpg?raw=true");
+  background-image: url("img/otsu/otsu_overview_presentation.jpg");
 }
 .project-thumbnail.otsu-esports {
-  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/esports/otsu_esports-mural-players.jpg?raw=true");
+  background-image: url("img/esports/otsu_esports-arena-window-full.jpg");
 }
 .project-thumbnail.otsu-initiatives {
-  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/otsu/otsu_logofolio.jpg?raw=true");
+  background-image: url("img/otsu/otsu_logofolio.jpg");
 }
 
 .project-description {
