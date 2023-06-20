@@ -17,35 +17,35 @@ $(document).ready(function() {
             $('#header').show("fade", {direction: "up"}, 200);
         } else if (scrolling === false && prevScrollPos > currentScrollPos || scrollTop <= 0) {
             $('#header').show("fade", {direction: "up"}, 200); 
-        }  else if ($(window).scrollTop() + $(window).height() == $(document).height() || window.scrollY == 0){
+        } else if ($(window).scrollTop() + $(window).height() == $(document).height() || window.scrollY == 0){
             $('#header').show("fade", {direction: "up"}, 200);
         }        
         prevScrollPos = currentScrollPos;  
     }  
-    // function checkMedia(){
-    //     if (url.indexOf("raw-pet-food") > -1) {
-    //         var scrollTop = $(window).scrollTop() + tolerancePixel;
-    //         var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+    function checkMedia(){
+        if (url.indexOf("raw-pet-food") > -1) {
+            var scrollTop = $(window).scrollTop() + tolerancePixel;
+            var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
 
-    //         media.each(function(index, el) {
-    //             var yTopMedia = $(this).offset().top;
-    //             var yBottomMedia = $(this).height() + yTopMedia;
+            media.each(function(index, el) {
+                var yTopMedia = $(this).offset().top;
+                var yBottomMedia = $(this).height() + yTopMedia;
 
-    //             if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
-    //                 $(this).get(0).play();
-    //             } else {
-    //                 $(this).get(0).pause();
-    //             }
-    //         }, setInterval(1000));
-    //     } else {}
-    // }
-    // function checkPausePlay() {
-    //     $(document).on('scroll', checkMedia);
-    // }              
+                if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+                    $(this).get(0).play();
+                } else {
+                    $(this).get(0).pause();
+                }
+            }, setInterval(1000));
+        } else {}
+    }
+    function checkPausePlay() {
+        $(document).on('scroll', checkMedia);
+    }              
     function hideShowMenuScroll() {
-        $(window).scroll(function() {
-            scrolling = true;          
-        })    
+        $(window).on("scroll", function() {
+                scrolling = true;    
+            }) 
         hidingMenu = setInterval(checkScrollPos, 200);
     }    
     function pageNavCSS() {
@@ -126,6 +126,15 @@ $(document).ready(function() {
         if (url.indexOf("raw-pet-food") > -1 ) {
             revealHideClass("raw-pet-food");
         } else
+        if (url.indexOf("otsu") > -1 ) {
+            revealHideClass("otsu");
+        } else
+        if (url.indexOf("otsu-esports") > -1 ) {
+            revealHideClass("otsu-esports");
+        } else
+        if (url.indexOf("otsu-initiatives") > -1 ) {
+            revealHideClass("otsu-initiatives");
+        } else
         if (url === "/" || url.indexOf("index") > -1 || url.indexOf("work") > -1 ) {
             revealHideClass("index");
         }                               
@@ -182,7 +191,7 @@ $(document).ready(function() {
         });
     }
 
-    // checkPausePlay(); 
+    checkPausePlay(); 
     pageNavCSS();
     staticRevealHideClass();
     scalePicOnHover();
