@@ -22,26 +22,26 @@ $(document).ready(function() {
         }        
         prevScrollPos = currentScrollPos;  
     }  
-    function checkMedia(){
-        if (url.indexOf("raw-pet-food") > -1) {
-            var scrollTop = $(window).scrollTop() + tolerancePixel;
-            var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+    // function checkMedia(){
+    //     if (url.indexOf("raw-pet-food") > -1) {
+    //         var scrollTop = $(window).scrollTop() + tolerancePixel;
+    //         var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
 
-            media.each(function(index, el) {
-                var yTopMedia = $(this).offset().top;
-                var yBottomMedia = $(this).height() + yTopMedia;
+    //         media.each(function(index, el) {
+    //             var yTopMedia = $(this).offset().top;
+    //             var yBottomMedia = $(this).height() + yTopMedia;
 
-                if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
-                    $(this).get(0).play();
-                } else {
-                    $(this).get(0).pause();
-                }
-            }, setInterval(1000));
-        } else {}
-    }
-    function checkPausePlay() {
-        $(document).on('scroll', checkMedia);
-    }              
+    //             if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+    //                 $(this).get(0).play();
+    //             } else {
+    //                 $(this).get(0).pause();
+    //             }
+    //         }, setInterval(1000));
+    //     } else {}
+    // }
+    // function checkPausePlay() {
+    //     $(document).on('scroll', checkMedia);
+    // }              
     function hideShowMenuScroll() {
         $(window).scroll(function() {
             scrolling = true;          
@@ -85,10 +85,12 @@ $(document).ready(function() {
         }                         
     }
     function projectCarouselFlickity() {
-        $("#carousel-container").flickity({
+        $("#carousel-container.other-projects").flickity({
             asNavFor: "#carousel-container",
             cellAlign: "left",
             draggable: true,
+            wrapAround: true,
+            groupCells: "100%",
             prevNextButtons: false
         });  
     }    
@@ -107,11 +109,11 @@ $(document).ready(function() {
     function scalePicOnHover() {
         $(".for-carousel").on("mouseenter mousedown touchstart", function(){
             $(this).find("img.thumbnail").css("transform", "scale(1.05)");
-            $(this).find(".project-description").removeClass("hide");  
+            // $(this).find(".project-description").removeClass("hide");  
         })
         $(".for-carousel").on("mouseleave mouseup touchend", function(){
             $(this).find("img.thumbnail").css("transform", "scale(1)");
-            $(this).find(".project-description").addClass("hide");      
+            // $(this).find(".project-description").addClass("hide");      
         })            
     }         
     function staticRevealHideClass() { 
@@ -169,10 +171,18 @@ $(document).ready(function() {
             scrollTop = window.scrollY;                        
         }) 
     }
-    //   
-    //    
-    //
-    checkPausePlay(); 
+    function updatePicOnHover() {
+        $(".project-thumbnail").on({
+            mouseenter: function() {
+                $(this).find("img").css("opacity", "0");
+            },
+            mouseleave: function() {
+                $(this).find("img").css("opacity", "1");
+            }
+        });
+    }
+
+    // checkPausePlay(); 
     pageNavCSS();
     staticRevealHideClass();
     scalePicOnHover();
@@ -185,5 +195,10 @@ $(document).ready(function() {
     loadPageContentIndex("index", "Work");    
     loadPageContent("pathwise", "Pathwise Credit Union");
     loadPageContent("raw-pet-food", "Raw Pet Food Subscription Service");
-//
+    loadPageContent("otsu", "Ontario Tech Student Union");
+    loadPageContent("otsu-initiatives", "OTSU Initiatives Branding");
+    loadPageContent("otsu-esports", "OTSU Esports Arena Mural");
+    updatePicOnHover();
+
+
 });
