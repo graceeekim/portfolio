@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;1,200;1,300&display=swap");
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  transition: all 0.1s ease-in-out;
+  color: black;
+}
+
+::-moz-selection {
+  background-color: rgba(243, 112, 83, 0.3);
+}
+
+::selection {
+  background-color: rgba(243, 112, 83, 0.3);
+}
+
+a:hover, a:active {
+  color: #f37053;
+}
+
+body {
+  background: #fefcfa;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#header {
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+nav, footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+footer {
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: flex-end;
+  position: relative;
+  bottom: 0;
+}
+footer > p {
+  font-size: 0.75rem;
+}
+
+.fa-linkedin-in, .fa-envelope {
+  margin-left: 0.625rem;
+}
+.fa-linkedin-in:hover, .fa-envelope:hover {
+  color: #f37053;
+}
+
+#gk {
+  font-family: playfair-display, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #f37053;
+}
+@media only screen and (min-width: 650px) {
+  #gk {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #gk {
+    font-size: 4rem;
+  }
+}
+#gk:hover {
+  color: #522e91;
+}
+
+#site-menu, .social-icon-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.social-icon-container {
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 1400px) {
+  .social-icon-container {
+    font-size: 1.4rem;
+  }
+}
+
+#site-pages {
+  display: flex;
+  width: auto;
+  flex-flow: row nowrap;
+  text-align: right;
+}
+
+.menu-link {
+  font-family: degular, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0 0 0 1.25rem;
+  color: #706a69;
+}
+@media only screen and (min-width: 650px) {
+  .menu-link {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .menu-link {
+    font-size: 1.25rem;
+  }
+}
+
+h2 {
+  font-family: freight-display-pro, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 100%;
+  padding-bottom: 0.25rem;
+}
+@media only screen and (min-width: 650px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+h2:hover {
+  color: #f37053;
+}
+
+p {
+  font-family: degular-text, sans-serif;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.page-content.index {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 5rem 1rem 2rem 1rem;
+}
+@media only screen and (min-width: 480px) {
+  .page-content.index {
+    margin: 15vw 5vw 5vw 5vw;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .page-content.index {
+    grid-template-columns: 1fr 1fr;
+    margin: 10vw;
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .page-content.index {
+    gap: 4rem;
+  }
+}
+.page-content.about {
+  width: auto;
+  height: 100%;
+  margin: 5rem 1rem 2rem 1rem;
+}
+@media only screen and (min-width: 480px) {
+  .page-content.about {
+    margin: 15vw 5vw 5vw 5vw;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .page-content.about {
+    margin: 10vw;
+  }
+}
+
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-self: center;
+}
+
+section, .page-content {
+  gap: 5vw;
+}
+@media only screen and (min-width: 650px) {
+  section, .page-content {
+    gap: 7vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section, .page-content {
+    gap: 5vw;
+  }
+}
+
+.project-image, .project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen, .project-video, .project-info {
+  width: 90vw;
+}
+@media only screen and (min-width: 650px) {
+  .project-image, .project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen, .project-video, .project-info {
+    width: 85vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-image, .project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen, .project-video, .project-info {
+    width: 80vw;
+  }
+}
+.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen {
+  width: 100vw;
+}
+.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen {
+  width: 100vw;
+}
+.project-image:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen), .project-image--fullscreen:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen), .project-video--fullscreen:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen), .project-info--fullscreen:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen), .project-video:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen), .project-info:not(.project-image--fullscreen, .project-video--fullscreen, .project-info--fullscreen) {
+  max-width: 1800px;
+}
+
+#portrait {
+  width: 50%;
+  align-self: center;
+}
+@media only screen and (min-width: 650px) {
+  #portrait {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 900px), (min-width: 650px) and (max-width: 900px) and (orientation: landscape) {
+  #portrait {
+    width: 30%;
+    margin: 0 4rem 0 0;
+  }
+}
+#portrait > img {
+  border-radius: 50%;
+}
+
+.project-thumbnail {
+  display: flex;
+  flex-flow: row wrap;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  aspect-ratio: 3/2;
+}
+.project-thumbnail img, .project-thumbnail video {
+  height: 100%;
+}
+.project-thumbnail.raw-pet-food {
+  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/pet/pet-food_mobile-screens.jpg?raw=true");
+}
+.project-thumbnail.pathwise {
+  background-image: url("https://www.graceeekim.com/img/pathwise_credit-card-ad.jpg");
+}
+.project-thumbnail.otsu {
+  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/otsu/otsu_gov-training_pages.jpg?raw=true");
+}
+.project-thumbnail.otsu-esports {
+  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/esports/otsu_esports-mural-players.jpg?raw=true");
+}
+.project-thumbnail.otsu-initiatives {
+  background-image: url("https://github.com/graceeekim/portfolio/blob/master/img/otsu/otsu_logofolio.jpg?raw=true");
+}
+
+.project-description {
+  padding: 1rem 3rem 0 0;
+  background: #fefcfa;
+}
+
+.project-info {
+  gap: 0;
+  margin: 2.5vw 0;
+}
+@media only screen and (min-width: 650px) {
+  .project-info {
+    margin: 3.25vw 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-info {
+    margin: 5vw 0;
+  }
+}
+.project-info > header {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .project-info > header {
+    width: 40%;
+    padding-right: 4rem;
+  }
+}
+.project-info.about {
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 900px) {
+  .project-info.about {
+    align-items: center;
+    text-align: left;
+    height: 75%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-info.about {
+    height: 65%;
+  }
+}
+.project-info.about > header {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .project-info.about > header {
+    width: 40%;
+    padding-right: 0;
+  }
+}
+
+.project-title {
+  font-family: freight-display-pro, serif;
+  font-size: 2rem;
+  line-height: 1.125;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (min-width: 650px) {
+  .project-title {
+    padding-bottom: 1rem;
+  }
+}
+.project-title.about {
+  padding-bottom: 2rem;
+}
+@media only screen and (min-width: 650px) {
+  .project-title.about {
+    padding-bottom: 1rem;
+  }
+}
+.project-title.in-text {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.project-details {
+  font-family: degular-text, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #706a69;
+  padding-bottom: 1.5rem;
+}
+
+.project-blurb {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .project-blurb {
+    width: 60%;
+  }
+}/*# sourceMappingURL=main.css.map */
