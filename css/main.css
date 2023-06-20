@@ -21,10 +21,6 @@ a:hover, a:active {
   color: #f37053;
 }
 
-.hide {
-    opacity: 0;
-}
-
 body {
   background: #fefcfa;
   margin: 0;
