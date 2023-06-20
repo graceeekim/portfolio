@@ -180,7 +180,6 @@ ul {
 }
 .page-content.about {
   width: auto;
-  height: 100%;
   margin: 5rem 1rem 2rem 1rem;
 }
 @media only screen and (min-width: 480px) {
@@ -315,6 +314,7 @@ section, .page-content {
 .project-info.about {
   width: 100%;
   text-align: center;
+  margin: 0;
 }
 @media only screen and (min-width: 900px) {
   .project-info.about {
